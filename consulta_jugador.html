@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Torneo Infantil - Consulta de Jugador
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="assets/css/torneo.css" rel="stylesheet"/>
+ </head>
+ <body data-page="reportes">
+  <button aria-label="Abrir menú" class="mobile-menu" data-menu-toggle="">
+   <i class="fa-solid fa-bars">
+   </i>
+  </button>
+  <div class="mobile-backdrop" data-mobile-backdrop="">
+  </div>
+  <div class="app">
+   <aside class="sidebar">
+    <div class="brand">
+     <div class="brand-mark">
+      <i class="fa-solid fa-futbol">
+      </i>
+     </div>
+     <div class="brand-title">
+      Torneo Infantil
+     </div>
+     <div class="brand-sub">
+      Gestión deportiva
+     </div>
+    </div>
+    <nav class="nav">
+     <a data-nav="inicio" href="index.html">
+      <i class="fa-solid fa-house-chimney">
+      </i>
+      <span>
+       Inicio
+      </span>
+     </a>
+     <a data-nav="jugadores" href="jugadores.html">
+      <i class="fa-solid fa-child-reaching">
+      </i>
+      <span>
+       Jugadores
+      </span>
+     </a>
+     <a data-nav="equipos" href="equipos.html">
+      <i class="fa-solid fa-shield-halved">
+      </i>
+      <span>
+       Equipos
+      </span>
+     </a>
+     <a data-nav="jornadas" href="jornadas.html">
+      <i class="fa-solid fa-calendar-days">
+      </i>
+      <span>
+       Jornadas
+      </span>
+     </a>
+     <a data-nav="partidos" href="partidos.html">
+      <i class="fa-solid fa-flag-checkered">
+      </i>
+      <span>
+       Partidos
+      </span>
+     </a>
+     <a data-nav="goles" href="goles.html">
+      <i class="fa-solid fa-futbol">
+      </i>
+      <span>
+       Goles
+      </span>
+     </a>
+     <a data-nav="incidencias" href="incidencias.html">
+      <i class="fa-solid fa-clipboard-list">
+      </i>
+      <span>
+       Incidencias
+      </span>
+     </a>
+     <a data-nav="reportes" href="reportes.html">
+      <i class="fa-solid fa-chart-pie">
+      </i>
+      <span>
+       Reportes
+      </span>
+     </a>
+    </nav>
+   </aside>
+   <main class="main">
+    <div class="breadcrumb">
+     <a href="reportes.html">
+      Reportes
+     </a>
+     <i class="fa-solid fa-chevron-right">
+     </i>
+     <span>
+      Consulta de Jugador
+     </span>
+    </div>
+    <div class="view-head">
+     <div>
+      <div class="view-title-row">
+       <div class="title-icon">
+        <i class="fa-solid fa-id-card">
+        </i>
+       </div>
+       <h1 class="view-title">
+        Consulta de Jugador
+       </h1>
+      </div>
+      <p class="view-subtitle">
+       Toda su participación en el torneo en un solo lugar
+      </p>
+     </div>
+     <div class="actions">
+      <a class="btn btn-outline" href="reportes.html">
+       <i class="fa-solid fa-arrow-left">
+       </i>
+       Volver a reportes
+      </a>
+      <button class="btn btn-primary" data-toast-message="Consulta reiniciada.">
+       <i class="fa-solid fa-rotate-right">
+       </i>
+       Nueva consulta
+      </button>
+     </div>
+    </div>
+    <div class="filters">
+     <div class="grow">
+      <input class="input" placeholder="Buscar jugador por nombre o apellido..." value="Carlos Andrés López García"/>
+     </div>
+    </div>
+    <section class="card profile">
+     <div class="profile-left">
+      <img alt="Carlos Andrés López García" class="avatar avatar-lg" src="https://api.dicebear.com/7.x/adventurer/svg?seed=CarlosL&amp;backgroundColor=b6e3f4"/>
+      <div>
+       <div class="profile-name">
+        Carlos Andrés López García
+       </div>
+       <div class="profile-meta">
+        <span class="pill pill-blue">
+         Municipal
+        </span>
+        <span class="pill pill-purple">
+         Delantero
+        </span>
+        <span class="pill pill-yellow">
+         <i class="fa-solid fa-crown">
+         </i>
+         Líder goleador
+        </span>
+       </div>
+       <div class="profile-note">
+        Nacimiento: 14/05/2015 · Distinción calculada a partir de las estadísticas del torneo.
+       </div>
+      </div>
+     </div>
+     <div class="profile-kpis">
+      <div class="mini-kpi">
+       <b>
+        12
+       </b>
+       <span>
+        Total goles
+       </span>
+      </div>
+      <div class="mini-kpi">
+       <b style="color:var(--orange)">
+        1
+       </b>
+       <span>
+        Incidencias
+       </span>
+      </div>
+     </div>
+    </section>
+    <div class="grid grid-2" style="margin-top:22px">
+     <section class="card pad">
+      <div class="section-title" style="margin-top:0">
+       Historial de goles
+      </div>
+      <div class="list">
+       <div class="row-card">
+        <div class="row-main">
+         <div class="row-name">
+          Municipal 3 - 1 Antigua
+         </div>
+         <div class="row-meta">
+          Jornada 2 · 03/10/2026
+         </div>
+        </div>
+        <span class="pill pill-green">
+         2 goles
+        </span>
+       </div>
+       <div class="row-card">
+        <div class="row-main">
+         <div class="row-name">
+          Comunicaciones Infantil 2 - 2 Municipal
+         </div>
+         <div class="row-meta">
+          Jornada 1 · 26/09/2026
+         </div>
+        </div>
+        <span class="pill pill-green">
+         1 gol
+        </span>
+       </div>
+      </div>
+     </section>
+     <section class="card pad">
+      <div class="section-title" style="margin-top:0">
+       Historial de incidencias
+      </div>
+      <div class="incident card">
+       <div class="incident-head">
+        <span class="pill pill-yellow">
+         AMARILLA
+        </span>
+        <strong>
+         Falta peligrosa en mediocampo
+        </strong>
+       </div>
+       <div class="incident-dates">
+        <span>
+         Municipal vs Antigua · Jornada 2
+        </span>
+        <span>
+         03/10/2026
+        </span>
+        <span>
+         Suspensión: no aplica
+        </span>
+       </div>
+      </div>
+     </section>
+    </div>
+    <div class="footer-note">
+     Prototipo visual navegable · Torneo Infantil
+    </div>
+   </main>
+  </div>
+  <div class="toast" data-toast="">
+  </div>
+  <script src="assets/js/app.js">
+  </script>
+ </body>
+</html>

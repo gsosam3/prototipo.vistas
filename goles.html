@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Torneo Infantil - Goles
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="assets/css/torneo.css" rel="stylesheet"/>
+ </head>
+ <body data-page="goles">
+  <button aria-label="Abrir menú" class="mobile-menu" data-menu-toggle="">
+   <i class="fa-solid fa-bars">
+   </i>
+  </button>
+  <div class="mobile-backdrop" data-mobile-backdrop="">
+  </div>
+  <div class="app">
+   <aside class="sidebar">
+    <div class="brand">
+     <div class="brand-mark">
+      <i class="fa-solid fa-futbol">
+      </i>
+     </div>
+     <div class="brand-title">
+      Torneo Infantil
+     </div>
+     <div class="brand-sub">
+      Gestión deportiva
+     </div>
+    </div>
+    <nav class="nav">
+     <a data-nav="inicio" href="index.html">
+      <i class="fa-solid fa-house-chimney">
+      </i>
+      <span>
+       Inicio
+      </span>
+     </a>
+     <a data-nav="jugadores" href="jugadores.html">
+      <i class="fa-solid fa-child-reaching">
+      </i>
+      <span>
+       Jugadores
+      </span>
+     </a>
+     <a data-nav="equipos" href="equipos.html">
+      <i class="fa-solid fa-shield-halved">
+      </i>
+      <span>
+       Equipos
+      </span>
+     </a>
+     <a data-nav="jornadas" href="jornadas.html">
+      <i class="fa-solid fa-calendar-days">
+      </i>
+      <span>
+       Jornadas
+      </span>
+     </a>
+     <a data-nav="partidos" href="partidos.html">
+      <i class="fa-solid fa-flag-checkered">
+      </i>
+      <span>
+       Partidos
+      </span>
+     </a>
+     <a data-nav="goles" href="goles.html">
+      <i class="fa-solid fa-futbol">
+      </i>
+      <span>
+       Goles
+      </span>
+     </a>
+     <a data-nav="incidencias" href="incidencias.html">
+      <i class="fa-solid fa-clipboard-list">
+      </i>
+      <span>
+       Incidencias
+      </span>
+     </a>
+     <a data-nav="reportes" href="reportes.html">
+      <i class="fa-solid fa-chart-pie">
+      </i>
+      <span>
+       Reportes
+      </span>
+     </a>
+    </nav>
+   </aside>
+   <main class="main">
+    <div class="topbar">
+     <div class="search">
+      <i class="fa-solid fa-magnifying-glass">
+      </i>
+      <input placeholder="Buscar jugadores, equipos, jornadas..." type="search"/>
+     </div>
+     <div class="top-info">
+      <i class="fa-solid fa-calendar-day">
+      </i>
+      <span>
+       Próxima jornada:
+       <strong>
+        Jornada 3 · 10 Oct 2026
+       </strong>
+      </span>
+     </div>
+    </div>
+    <div class="view-head">
+     <div>
+      <div class="view-title-row">
+       <div class="title-icon">
+        <i class="fa-solid fa-futbol">
+        </i>
+       </div>
+       <h1 class="view-title">
+        Goles
+       </h1>
+      </div>
+      <p class="view-subtitle">
+       ¡Cada gol cuenta! Registra anotaciones por partido
+      </p>
+     </div>
+     <div class="actions">
+      <button class="btn btn-primary" data-crud-open="gol" data-mode="create" type="button">
+       <i class="fa-solid fa-plus">
+       </i>
+       Registrar goles
+      </button>
+     </div>
+    </div>
+    <section class="stats">
+     <div class="stat">
+      <div class="stat-icon">
+       <i class="fa-solid fa-futbol">
+       </i>
+      </div>
+      <div>
+       <div class="stat-value">
+        75
+       </div>
+       <div class="stat-label">
+        Total de goles
+       </div>
+      </div>
+     </div>
+     <div class="stat">
+      <div class="stat-icon">
+       <i class="fa-solid fa-users">
+       </i>
+      </div>
+      <div>
+       <div class="stat-value">
+        21
+       </div>
+       <div class="stat-label">
+        Jugadores con gol
+       </div>
+      </div>
+     </div>
+    </section>
+    <div class="filters" data-filter-scope="">
+     <div class="grow">
+      <input class="input" data-search-input="" placeholder="Buscar jugador, equipo o partido..."/>
+     </div>
+     <select class="select" data-filter-select="team" style="max-width:210px">
+      <option value="todos">
+       Todos los equipos
+      </option>
+      <option value="municipal">
+       Municipal
+      </option>
+      <option value="antigua">
+       Antigua
+      </option>
+     </select>
+    </div>
+    <div class="list">
+     <div class="row-card" data-filter-item="" data-search="Carlos Andrés López García Municipal Municipal 3 - 1 Antigua · Jornada 2" data-team="municipal">
+      <img alt="Carlos Andrés López García" class="avatar" src="https://api.dicebear.com/7.x/adventurer/svg?seed=CarlosL&amp;backgroundColor=b6e3f4"/>
+      <div class="row-main">
+       <div class="row-name">
+        Carlos Andrés López García
+       </div>
+       <div class="row-meta">
+        Municipal · Municipal 3 - 1 Antigua · Jornada 2
+       </div>
+      </div>
+      <span class="pill pill-green">
+       <i class="fa-solid fa-futbol">
+       </i>
+       2 goles
+      </span>
+      <div class="row-actions">
+       <button class="btn btn-outline btn-sm" data-cantidad="2" data-crud-open="gol" data-jugador="Carlos Andrés López García · Municipal" data-mode="edit" data-partido="Municipal vs Antigua · Jornada 2 · 03/10/2026" type="button">
+        <i class="fa-solid fa-pen">
+        </i>
+       </button>
+       <a class="btn btn-danger btn-sm" data-confirm="¿Eliminar este registro de goles?" href="#">
+        <i class="fa-solid fa-trash">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="row-card" data-filter-item="" data-search="Mateo García Morales Antigua Municipal 3 - 1 Antigua · Jornada 2" data-team="antigua">
+      <img alt="Mateo García Morales" class="avatar" src="https://api.dicebear.com/7.x/adventurer/svg?seed=MateoG&amp;backgroundColor=b6e3f4"/>
+      <div class="row-main">
+       <div class="row-name">
+        Mateo García Morales
+       </div>
+       <div class="row-meta">
+        Antigua · Municipal 3 - 1 Antigua · Jornada 2
+       </div>
+      </div>
+      <span class="pill pill-green">
+       <i class="fa-solid fa-futbol">
+       </i>
+       1 gol
+      </span>
+      <div class="row-actions">
+       <button class="btn btn-outline btn-sm" data-cantidad="1" data-crud-open="gol" data-jugador="Mateo García Morales · Antigua" data-mode="edit" data-partido="Municipal vs Antigua · Jornada 2 · 03/10/2026" type="button">
+        <i class="fa-solid fa-pen">
+        </i>
+       </button>
+       <a class="btn btn-danger btn-sm" data-confirm="¿Eliminar este registro de goles?" href="#">
+        <i class="fa-solid fa-trash">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="row-card" data-filter-item="" data-search="Carlos Andrés López García Municipal Comunicaciones Infantil 2 - 2 Municipal · Jornada 1" data-team="municipal">
+      <img alt="Carlos Andrés López García" class="avatar" src="https://api.dicebear.com/7.x/adventurer/svg?seed=CarlosL&amp;backgroundColor=b6e3f4"/>
+      <div class="row-main">
+       <div class="row-name">
+        Carlos Andrés López García
+       </div>
+       <div class="row-meta">
+        Municipal · Comunicaciones Infantil 2 - 2 Municipal · Jornada 1
+       </div>
+      </div>
+      <span class="pill pill-green">
+       <i class="fa-solid fa-futbol">
+       </i>
+       1 gol
+      </span>
+      <div class="row-actions">
+       <button class="btn btn-outline btn-sm" data-cantidad="1" data-crud-open="gol" data-jugador="Carlos Andrés López García · Municipal" data-mode="edit" data-partido="Municipal vs Comunicaciones Infantil · Jornada 1 · 26/09/2026" type="button">
+        <i class="fa-solid fa-pen">
+        </i>
+       </button>
+       <a class="btn btn-danger btn-sm" data-confirm="¿Eliminar este registro de goles?" href="#">
+        <i class="fa-solid fa-trash">
+        </i>
+       </a>
+      </div>
+     </div>
+    </div>
+    <div class="footer-note">
+     Prototipo visual navegable · Torneo Infantil
+    </div>
+   </main>
+  </div>
+  <div class="toast" data-toast="">
+  </div>
+  <script src="assets/js/app.js">
+  </script>
+  <div aria-hidden="true" class="crud-backdrop" data-crud-modal="gol">
+   <section aria-labelledby="gol-modal-title" aria-modal="true" class="crud-modal" role="dialog">
+    <div class="crud-head">
+     <div>
+      <div class="crud-kicker">
+       <i class="fa-solid fa-futbol">
+       </i>
+       Goles
+      </div>
+      <h2 data-create-title="Registrar goles" data-crud-title="" data-edit-title="Editar registro de goles" id="gol-modal-title">
+       Registrar goles
+      </h2>
+      <p>
+       Elige al jugador y el partido; la jornada y la fecha se obtienen del encuentro.
+      </p>
+     </div>
+     <button aria-label="Cerrar" class="modal-close" data-close-crud="" type="button">
+      <i class="fa-solid fa-xmark">
+      </i>
+     </button>
+    </div>
+    <form class="crud-form" data-crud-form="gol" data-entity-label="Registro de goles">
+     <div class="form-grid modal-form-grid">
+      <div class="form-group">
+       <label class="label" for="gol_jugador">
+        Jugador
+       </label>
+       <select class="select" data-summary-label="Jugador" id="gol_jugador" name="jugador" required="">
+        <option value="">
+         Seleccione...
+        </option>
+        <option>
+         Carlos Andrés López García · Municipal
+        </option>
+        <option>
+         Mateo García Morales · Antigua
+        </option>
+        <option>
+         Luis Méndez Ruiz · Comunicaciones Infantil
+        </option>
+        <option>
+         Diego Alejandro Ramírez · Municipal
+        </option>
+       </select>
+      </div>
+      <div class="form-group">
+       <label class="label" for="gol_cantidad">
+        Cantidad de goles
+       </label>
+       <input class="input" data-summary-label="Cantidad de goles" id="gol_cantidad" min="0" name="cantidad" required="" type="number"/>
+      </div>
+      <div class="form-group full">
+       <label class="label" for="gol_partido">
+        Partido
+       </label>
+       <select class="select" data-summary-label="Partido" id="gol_partido" name="partido" required="">
+        <option value="">
+         Seleccione...
+        </option>
+        <option>
+         Municipal vs Antigua · Jornada 2 · 03/10/2026
+        </option>
+        <option>
+         Comunicaciones Infantil vs Aurora Infantil · Jornada 3 · 10/10/2026
+        </option>
+        <option>
+         Municipal vs Comunicaciones Infantil · Jornada 1 · 26/09/2026
+        </option>
+       </select>
+      </div>
+      <div class="form-group full">
+       <div class="helper-box">
+        <i class="fa-solid fa-link">
+        </i>
+        <div>
+         <b>
+          Datos vinculados
+         </b>
+         <span>
+          Equipo, jornada y fecha no se vuelven a capturar; se deducen del jugador y del partido.
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="form-actions modal-form-actions">
+      <button class="btn btn-outline" data-close-crud="" type="button">
+       <i class="fa-solid fa-arrow-left">
+       </i>
+       Regresar
+      </button>
+      <button class="btn btn-primary" type="submit">
+       <i class="fa-solid fa-list-check">
+       </i>
+       Revisar y guardar
+      </button>
+     </div>
+    </form>
+   </section>
+  </div>
+ </body>
+</html>

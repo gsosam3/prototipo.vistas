@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Torneo Infantil - Partidos
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="assets/css/torneo.css" rel="stylesheet"/>
+ </head>
+ <body data-page="partidos">
+  <button aria-label="Abrir menú" class="mobile-menu" data-menu-toggle="">
+   <i class="fa-solid fa-bars">
+   </i>
+  </button>
+  <div class="mobile-backdrop" data-mobile-backdrop="">
+  </div>
+  <div class="app">
+   <aside class="sidebar">
+    <div class="brand">
+     <div class="brand-mark">
+      <i class="fa-solid fa-futbol">
+      </i>
+     </div>
+     <div class="brand-title">
+      Torneo Infantil
+     </div>
+     <div class="brand-sub">
+      Gestión deportiva
+     </div>
+    </div>
+    <nav class="nav">
+     <a data-nav="inicio" href="index.html">
+      <i class="fa-solid fa-house-chimney">
+      </i>
+      <span>
+       Inicio
+      </span>
+     </a>
+     <a data-nav="jugadores" href="jugadores.html">
+      <i class="fa-solid fa-child-reaching">
+      </i>
+      <span>
+       Jugadores
+      </span>
+     </a>
+     <a data-nav="equipos" href="equipos.html">
+      <i class="fa-solid fa-shield-halved">
+      </i>
+      <span>
+       Equipos
+      </span>
+     </a>
+     <a data-nav="jornadas" href="jornadas.html">
+      <i class="fa-solid fa-calendar-days">
+      </i>
+      <span>
+       Jornadas
+      </span>
+     </a>
+     <a data-nav="partidos" href="partidos.html">
+      <i class="fa-solid fa-flag-checkered">
+      </i>
+      <span>
+       Partidos
+      </span>
+     </a>
+     <a data-nav="goles" href="goles.html">
+      <i class="fa-solid fa-futbol">
+      </i>
+      <span>
+       Goles
+      </span>
+     </a>
+     <a data-nav="incidencias" href="incidencias.html">
+      <i class="fa-solid fa-clipboard-list">
+      </i>
+      <span>
+       Incidencias
+      </span>
+     </a>
+     <a data-nav="reportes" href="reportes.html">
+      <i class="fa-solid fa-chart-pie">
+      </i>
+      <span>
+       Reportes
+      </span>
+     </a>
+    </nav>
+   </aside>
+   <main class="main">
+    <div class="topbar">
+     <div class="search">
+      <i class="fa-solid fa-magnifying-glass">
+      </i>
+      <input placeholder="Buscar jugadores, equipos, jornadas..." type="search"/>
+     </div>
+     <div class="top-info">
+      <i class="fa-solid fa-calendar-day">
+      </i>
+      <span>
+       Próxima jornada:
+       <strong>
+        Jornada 3 · 10 Oct 2026
+       </strong>
+      </span>
+     </div>
+    </div>
+    <div class="view-head">
+     <div>
+      <div class="view-title-row">
+       <div class="title-icon">
+        <i class="fa-solid fa-flag-checkered">
+        </i>
+       </div>
+       <h1 class="view-title">
+        Partidos
+       </h1>
+      </div>
+      <p class="view-subtitle">
+       Consulta enfrentamientos y resultados del torneo
+      </p>
+     </div>
+     <div class="actions">
+      <button class="btn btn-primary" data-crud-open="partido" data-mode="create" type="button">
+       <i class="fa-solid fa-plus">
+       </i>
+       Registrar partido
+      </button>
+     </div>
+    </div>
+    <div class="filters" data-filter-scope="">
+     <select class="select" data-filter-select="jornada" style="max-width:250px">
+      <option value="todos">
+       Todas las jornadas
+      </option>
+      <option value="jornada1">
+       Jornada 1
+      </option>
+      <option value="jornada2">
+       Jornada 2
+      </option>
+      <option value="jornada3">
+       Jornada 3
+      </option>
+     </select>
+     <div class="grow">
+      <input class="input" data-search-input="" placeholder="Buscar por equipo..."/>
+     </div>
+    </div>
+    <div class="grid grid-2">
+     <div class="card match-card" data-filter-item="" data-jornada="jornada1" data-search="Comunicaciones Infantil Municipal">
+      <div class="match-top">
+       <span>
+        Jornada 1
+       </span>
+       <span>
+        26/09/2026
+       </span>
+      </div>
+      <div class="scoreline">
+       <div class="team-side">
+        <span class="team-dot">
+         <i class="fa-solid fa-shield">
+         </i>
+        </span>
+        Comunicaciones Infantil
+       </div>
+       <div class="score">
+        2 - 2
+       </div>
+       <div class="team-side right">
+        Municipal
+        <span class="team-dot">
+         <i class="fa-solid fa-shield">
+         </i>
+        </span>
+       </div>
+      </div>
+      <div class="match-meta">
+       El resultado se calculará con los goles registrados por jugador en este partido.
+      </div>
+      <div class="row-actions" style="margin-top:12px">
+       <a class="btn btn-blue btn-sm" href="goles.html">
+        <i class="fa-solid fa-futbol">
+        </i>
+        Ver goles
+       </a>
+       <button class="btn btn-outline btn-sm" data-crud-open="partido" data-jornada="Jornada 1 · 26/09/2026" data-local="Comunicaciones Infantil" data-mode="edit" data-visitante="Municipal" type="button">
+        <i class="fa-solid fa-pen">
+        </i>
+        Editar
+       </button>
+      </div>
+     </div>
+     <div class="card match-card" data-filter-item="" data-jornada="jornada2" data-search="Municipal Antigua">
+      <div class="match-top">
+       <span>
+        Jornada 2
+       </span>
+       <span>
+        03/10/2026
+       </span>
+      </div>
+      <div class="scoreline">
+       <div class="team-side">
+        <span class="team-dot">
+         <i class="fa-solid fa-shield">
+         </i>
+        </span>
+        Municipal
+       </div>
+       <div class="score">
+        3 - 1
+       </div>
+       <div class="team-side right">
+        Antigua
+        <span class="team-dot">
+         <i class="fa-solid fa-shield">
+         </i>
+        </span>
+       </div>
+      </div>
+      <div class="match-meta">
+       El resultado se calculará con los goles registrados por jugador en este partido.
+      </div>
+      <div class="row-actions" style="margin-top:12px">
+       <a class="btn btn-blue btn-sm" href="goles.html">
+        <i class="fa-solid fa-futbol">
+        </i>
+        Ver goles
+       </a>
+       <button class="btn btn-outline btn-sm" data-crud-open="partido" data-jornada="Jornada 2 · 03/10/2026" data-local="Municipal" data-mode="edit" data-visitante="Antigua" type="button">
+        <i class="fa-solid fa-pen">
+        </i>
+        Editar
+       </button>
+      </div>
+     </div>
+     <div class="card match-card" data-filter-item="" data-jornada="jornada3" data-search="Aurora Infantil Comunicaciones Infantil">
+      <div class="match-top">
+       <span>
+        Jornada 3
+       </span>
+       <span>
+        10/10/2026
+       </span>
+      </div>
+      <div class="scoreline">
+       <div class="team-side">
+        <span class="team-dot">
+         <i class="fa-solid fa-shield">
+         </i>
+        </span>
+        Aurora Infantil
+       </div>
+       <div class="score">
+        Próximo
+       </div>
+       <div class="team-side right">
+        Comunicaciones Infantil
+        <span class="team-dot">
+         <i class="fa-solid fa-shield">
+         </i>
+        </span>
+       </div>
+      </div>
+      <div class="match-meta">
+       El resultado se calculará con los goles registrados por jugador en este partido.
+      </div>
+      <div class="row-actions" style="margin-top:12px">
+       <a class="btn btn-blue btn-sm" href="goles.html">
+        <i class="fa-solid fa-futbol">
+        </i>
+        Ver goles
+       </a>
+       <button class="btn btn-outline btn-sm" data-crud-open="partido" data-jornada="Jornada 3 · 10/10/2026" data-local="Aurora Infantil" data-mode="edit" data-visitante="Comunicaciones Infantil" type="button">
+        <i class="fa-solid fa-pen">
+        </i>
+        Editar
+       </button>
+      </div>
+     </div>
+    </div>
+    <div class="footer-note">
+     Prototipo visual navegable · Torneo Infantil
+    </div>
+   </main>
+  </div>
+  <div class="toast" data-toast="">
+  </div>
+  <script src="assets/js/app.js">
+  </script>
+  <div aria-hidden="true" class="crud-backdrop" data-crud-modal="partido">
+   <section aria-labelledby="partido-modal-title" aria-modal="true" class="crud-modal" role="dialog">
+    <div class="crud-head">
+     <div>
+      <div class="crud-kicker">
+       <i class="fa-solid fa-flag-checkered">
+       </i>
+       Partidos
+      </div>
+      <h2 data-create-title="Crear partido" data-crud-title="" data-edit-title="Editar partido" id="partido-modal-title">
+       Crear partido
+      </h2>
+      <p>
+       Relaciona dos equipos dentro de una jornada. El marcador se calcula a partir de los goles.
+      </p>
+     </div>
+     <button aria-label="Cerrar" class="modal-close" data-close-crud="" type="button">
+      <i class="fa-solid fa-xmark">
+      </i>
+     </button>
+    </div>
+    <form class="crud-form" data-crud-form="partido" data-entity-label="Partido">
+     <div class="form-grid modal-form-grid">
+      <div class="form-group full">
+       <label class="label" for="partido_jornada">
+        Jornada
+       </label>
+       <select class="select" data-summary-label="Jornada" id="partido_jornada" name="jornada" required="">
+        <option value="">
+         Seleccione...
+        </option>
+        <option>
+         Jornada 1 · 26/09/2026
+        </option>
+        <option>
+         Jornada 2 · 03/10/2026
+        </option>
+        <option>
+         Jornada 3 · 10/10/2026
+        </option>
+        <option>
+         Jornada 4 · 17/10/2026
+        </option>
+       </select>
+      </div>
+      <div class="form-group">
+       <label class="label" for="partido_local">
+        Equipo local
+       </label>
+       <select class="select" data-summary-label="Equipo local" id="partido_local" name="local" required="">
+        <option value="">
+         Seleccione...
+        </option>
+        <option>
+         Municipal
+        </option>
+        <option>
+         Antigua
+        </option>
+        <option>
+         Comunicaciones Infantil
+        </option>
+        <option>
+         Aurora Infantil
+        </option>
+       </select>
+      </div>
+      <div class="form-group">
+       <label class="label" for="partido_visitante">
+        Equipo visitante
+       </label>
+       <select class="select" data-summary-label="Equipo visitante" id="partido_visitante" name="visitante" required="">
+        <option value="">
+         Seleccione...
+        </option>
+        <option>
+         Municipal
+        </option>
+        <option>
+         Antigua
+        </option>
+        <option>
+         Comunicaciones Infantil
+        </option>
+        <option>
+         Aurora Infantil
+        </option>
+       </select>
+      </div>
+      <div class="form-group full">
+       <div class="helper-box">
+        <i class="fa-solid fa-calculator">
+        </i>
+        <div>
+         <b>
+          Marcador automático
+         </b>
+         <span>
+          No se escribe manualmente: se obtiene sumando los goles de los jugadores de cada equipo en este partido.
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="form-actions modal-form-actions">
+      <button class="btn btn-outline" data-close-crud="" type="button">
+       <i class="fa-solid fa-arrow-left">
+       </i>
+       Regresar
+      </button>
+      <button class="btn btn-primary" type="submit">
+       <i class="fa-solid fa-list-check">
+       </i>
+       Revisar y guardar
+      </button>
+     </div>
+    </form>
+   </section>
+  </div>
+ </body>
+</html>
