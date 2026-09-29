@@ -1,0 +1,99 @@
+/* =========================================================
+   MICROANIMACIONES TEMÁTICAS
+   Todas son overlays no bloqueantes y respetan reduced-motion.
+   ========================================================= */
+
+.goal-overlay-demo{position:fixed;inset:0;z-index:9998;pointer-events:none;display:grid;place-items:center;opacity:0;transition:opacity .12s ease;overflow:hidden}
+.goal-overlay-demo.active{opacity:1}
+.goal-title-demo{position:relative;z-index:2;margin:0;font-size:clamp(54px,9vw,108px);font-weight:900;color:#22c55e;text-transform:uppercase;letter-spacing:.12em;font-style:italic;text-shadow:0 5px 0 rgba(255,255,255,.96),0 12px 26px rgba(34,197,94,.30);transform:scale(.45);opacity:0}
+.goal-overlay-demo.active .goal-title-demo{animation:goalTitlePop .72s cubic-bezier(.175,.885,.32,1.275) .18s both}
+.flying-ball-demo{position:absolute;left:-10vw;top:68%;width:72px;height:72px;display:grid;place-items:center;color:#fff;filter:drop-shadow(0 10px 15px rgba(0,0,0,.35));opacity:0;z-index:3}
+.flying-ball-demo i{font-size:66px;color:#fff;-webkit-text-stroke:1.6px #172033;filter:drop-shadow(0 5px 7px rgba(15,23,42,.28))}
+.goal-overlay-demo.active .flying-ball-demo{animation:flyBallDemo .92s cubic-bezier(.25,1,.5,1) forwards}
+.goal-overlay-demo.active .flying-ball-demo i{animation:spinBallDemo .92s linear forwards}
+.goal-swish-demo{position:absolute;width:30vw;min-width:260px;height:4px;border-radius:999px;background:linear-gradient(90deg,transparent,rgba(34,197,94,.16),rgba(34,197,94,.72),transparent);transform:rotate(-18deg) scaleX(0);opacity:0;left:28%;top:51%;transform-origin:left center}
+.goal-overlay-demo.active .goal-swish-demo{animation:swishDemo .6s ease-out .18s both}
+@keyframes goalTitlePop{0%{transform:scale(.45) rotate(-3deg);opacity:0}62%{transform:scale(1.08) rotate(1deg);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes flyBallDemo{0%{left:-8%;top:68%;transform:scale(.55);opacity:1}45%{left:45%;top:38%;transform:scale(1.25);opacity:1}100%{left:105%;top:28%;transform:scale(.8);opacity:1}}
+@keyframes spinBallDemo{from{transform:rotate(0deg)}to{transform:rotate(900deg)}}
+@keyframes swishDemo{0%{transform:rotate(-18deg) scaleX(0);opacity:0}30%{opacity:1}100%{transform:rotate(-18deg) scaleX(1);opacity:0}}
+@media (prefers-reduced-motion:reduce){.goal-overlay-demo{display:none!important}}
+
+/* Microanimación temática: Jugadores */
+.player-entrance{position:fixed;inset:0;z-index:9998;pointer-events:none;overflow:hidden;opacity:1;transition:opacity .28s ease;}
+.player-entrance.is-leaving{opacity:0;}
+.player-motion-stage{position:absolute;left:50%;top:49%;width:min(620px,86vw);height:220px;transform:translate(-50%,-50%);}
+.player-runner{position:absolute;left:-12%;bottom:46px;width:92px;height:92px;border-radius:30px;background:linear-gradient(145deg,#eafaf1,#fff);border:2px solid rgba(46,204,113,.20);box-shadow:0 18px 42px rgba(46,204,113,.20);display:grid;place-items:center;color:var(--green-700);font-size:48px;animation:playerRunIn .92s cubic-bezier(.2,.85,.25,1) .05s forwards;}
+.player-runner i{animation:playerBodyBounce .22s ease-in-out 4;}
+.player-ball{position:absolute;left:-4%;bottom:34px;width:43px;height:43px;border-radius:50%;background:#fff;display:grid;place-items:center;color:#263238;box-shadow:0 9px 20px rgba(44,62,80,.18);font-size:31px;animation:playerBallDribble .96s cubic-bezier(.22,.82,.25,1) .02s forwards;}
+.player-ball i{animation:playerBallSpin .96s linear .02s forwards;}
+.player-speed-line{position:absolute;left:2%;height:5px;border-radius:999px;background:linear-gradient(90deg,transparent,rgba(46,204,113,.34),transparent);opacity:0;animation:speedLine .62s ease .12s forwards;}
+.player-speed-line.line-one{width:180px;bottom:130px}.player-speed-line.line-two{width:130px;bottom:96px;animation-delay:.18s}.player-speed-line.line-three{width:90px;bottom:62px;animation-delay:.24s}
+.player-star{position:absolute;color:var(--yellow);opacity:0;filter:drop-shadow(0 6px 10px rgba(241,196,15,.26));animation:playerStarPop .52s cubic-bezier(.17,.89,.32,1.35) .72s forwards;}
+.player-star.star-one{left:55%;top:18px;font-size:28px}.player-star.star-two{left:64%;top:72px;font-size:18px;animation-delay:.80s}.player-star.star-three{left:49%;top:86px;font-size:16px;animation-delay:.86s}
+@keyframes playerRunIn{0%{left:-12%;transform:translateY(0) rotate(-4deg);opacity:0}15%{opacity:1}68%{left:51%;transform:translateY(-5px) rotate(1deg)}100%{left:52%;transform:translateY(0) rotate(0);opacity:1}}
+@keyframes playerBodyBounce{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(2deg)}}
+@keyframes playerBallDribble{0%{left:-4%;bottom:34px;transform:scale(.82);opacity:0}10%{opacity:1}26%{bottom:76px}48%{bottom:34px}68%{bottom:69px}100%{left:47%;bottom:34px;transform:scale(1);opacity:1}}
+@keyframes playerBallSpin{from{transform:rotate(0deg)}to{transform:rotate(760deg)}}
+@keyframes speedLine{0%{opacity:0;transform:translateX(-20px) scaleX(.4)}40%{opacity:1}100%{opacity:0;transform:translateX(230px) scaleX(1)}}
+@keyframes playerStarPop{0%{opacity:0;transform:scale(.2) rotate(-25deg)}70%{opacity:1;transform:scale(1.3) rotate(12deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+@media (max-width:700px){.player-motion-stage{height:180px}.player-runner{width:74px;height:74px;font-size:39px}.player-ball{width:36px;height:36px;font-size:26px}}
+@media (prefers-reduced-motion:reduce){.player-entrance{display:none!important}}
+
+
+.teams-entrance,.jornada-entrance,.match-entrance,.incident-entrance{position:fixed;inset:0;z-index:9998;pointer-events:none;overflow:hidden;opacity:1;transition:opacity .26s ease;}
+.teams-entrance.is-leaving,.jornada-entrance.is-leaving,.match-entrance.is-leaving,.incident-entrance.is-leaving{opacity:0;}
+.teams-motion-stage,.jornada-motion-stage,.match-motion-stage,.incident-motion-stage{position:absolute;left:50%;top:49%;width:min(650px,88vw);height:230px;transform:translate(-50%,-50%);}
+
+/* Equipos: tres escudos se reúnen */
+.team-shield{position:absolute;top:64px;width:86px;height:86px;border-radius:28px;display:grid;place-items:center;background:#fff;border:2px solid rgba(52,152,219,.16);box-shadow:0 18px 42px rgba(44,62,80,.16);font-size:45px;opacity:0;}
+.team-shield-a{left:-9%;color:#3498db;animation:teamShieldA .78s cubic-bezier(.2,.88,.25,1) .03s forwards;}
+.team-shield-b{left:44%;color:#2ecc71;animation:teamShieldB .78s cubic-bezier(.2,.88,.25,1) .07s forwards;}
+.team-shield-c{right:-9%;color:#f1c40f;animation:teamShieldC .78s cubic-bezier(.2,.88,.25,1) .11s forwards;}
+.team-spark{position:absolute;color:#f1c40f;opacity:0;filter:drop-shadow(0 5px 9px rgba(241,196,15,.25));animation:teamSpark .45s cubic-bezier(.17,.89,.32,1.35) .72s forwards;}
+.team-spark-a{left:47%;top:20px;font-size:24px}.team-spark-b{left:57%;top:48px;font-size:15px;animation-delay:.79s}
+@keyframes teamShieldA{0%{left:-9%;opacity:0;transform:rotate(-16deg) scale(.8)}18%{opacity:1}100%{left:30%;opacity:1;transform:rotate(-3deg) scale(1)}}
+@keyframes teamShieldB{0%{top:-30px;opacity:0;transform:scale(.72)}22%{opacity:1}100%{top:64px;opacity:1;transform:scale(1.08)}}
+@keyframes teamShieldC{0%{right:-9%;opacity:0;transform:rotate(16deg) scale(.8)}18%{opacity:1}100%{right:29%;opacity:1;transform:rotate(3deg) scale(1)}}
+@keyframes teamSpark{0%{opacity:0;transform:scale(.2) rotate(-30deg)}65%{opacity:1;transform:scale(1.35) rotate(15deg)}100%{opacity:1;transform:scale(1)}}
+
+/* Jornadas: calendario y fechas */
+.calendar-card{position:absolute;left:50%;top:50%;width:152px;height:150px;transform:translate(-50%,-50%) scale(.55) rotate(-7deg);border-radius:28px;background:#fff;border:2px solid rgba(230,126,34,.18);box-shadow:0 18px 42px rgba(230,126,34,.18);overflow:visible;opacity:0;animation:calendarPop .72s cubic-bezier(.17,.89,.32,1.25) .05s forwards;}
+.calendar-head{height:35px;background:linear-gradient(135deg,#f6a34a,#e67e22);border-radius:25px 25px 12px 12px;}
+.calendar-rings{position:absolute;left:0;right:0;top:-10px;display:flex;justify-content:space-around;padding:0 28px}.calendar-rings span{width:10px;height:28px;border-radius:8px;background:#607d8b;box-shadow:0 2px 0 rgba(255,255,255,.7)}
+.calendar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;padding:16px 20px}.calendar-grid i{width:15px;height:15px;border-radius:6px;background:#ffe9d1}.calendar-grid i:nth-child(5){background:#f6a34a;box-shadow:0 0 0 5px rgba(230,126,34,.10)}
+.calendar-page{position:absolute;right:-28px;bottom:-20px;width:64px;height:64px;border-radius:20px;background:#fff4e7;color:#d96d12;display:grid;place-items:center;font-size:25px;font-weight:900;border:2px solid rgba(230,126,34,.16);animation:calendarPage .56s cubic-bezier(.17,.89,.32,1.3) .48s both;}
+.date-chip{position:absolute;width:54px;height:54px;border-radius:18px;background:#fff;display:grid;place-items:center;font-weight:900;color:#e67e22;border:1px solid rgba(230,126,34,.15);box-shadow:0 10px 25px rgba(230,126,34,.12);opacity:0;}
+.date-chip-one{left:18%;top:88px;animation:dateChipLeft .6s ease .42s forwards}.date-chip-two{right:18%;top:55px;animation:dateChipRight .6s ease .48s forwards}.date-chip-three{right:24%;bottom:12px;animation:dateChipRight .6s ease .55s forwards}
+@keyframes calendarPop{0%{opacity:0;transform:translate(-50%,-50%) scale(.55) rotate(-7deg)}70%{opacity:1;transform:translate(-50%,-50%) scale(1.07) rotate(2deg)}100%{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0)}}
+@keyframes calendarPage{0%{opacity:0;transform:rotateY(80deg) scale(.7)}100%{opacity:1;transform:rotateY(0) scale(1)}}
+@keyframes dateChipLeft{0%{opacity:0;transform:translateX(-70px) rotate(-10deg)}100%{opacity:1;transform:none}}
+@keyframes dateChipRight{0%{opacity:0;transform:translateX(70px) rotate(10deg)}100%{opacity:1;transform:none}}
+
+/* Partidos: dos equipos chocan en VS */
+.match-shield{position:absolute;top:61px;width:94px;height:94px;border-radius:31px;background:#fff;display:grid;place-items:center;font-size:50px;border:2px solid rgba(52,152,219,.14);box-shadow:0 18px 44px rgba(44,62,80,.17);opacity:0;}
+.match-left{left:-14%;color:#3498db;animation:matchLeft .72s cubic-bezier(.2,.9,.25,1) .03s forwards}.match-right{right:-14%;color:#2ecc71;animation:matchRight .72s cubic-bezier(.2,.9,.25,1) .03s forwards}
+.match-vs{position:absolute;left:50%;top:82px;transform:translate(-50%,-50%) scale(.25);font-size:42px;font-weight:900;color:#34495e;text-shadow:0 5px 0 #fff,0 12px 24px rgba(44,62,80,.18);opacity:0;animation:matchVs .45s cubic-bezier(.17,.89,.32,1.35) .52s forwards}
+.match-ball{position:absolute;left:50%;bottom:10px;width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:32px;color:#263238;box-shadow:0 10px 22px rgba(44,62,80,.17);opacity:0;animation:matchBall .7s cubic-bezier(.2,.82,.25,1) .18s forwards}.match-ball i{animation:matchBallSpin .7s linear .18s forwards}
+.impact-ring{position:absolute;left:50%;top:104px;width:50px;height:50px;border:3px solid rgba(241,196,15,.55);border-radius:50%;opacity:0;transform:translate(-50%,-50%) scale(.2)}.ring-one{animation:impactRing .55s ease-out .56s forwards}.ring-two{animation:impactRing .55s ease-out .66s forwards}
+@keyframes matchLeft{0%{left:-14%;opacity:0;transform:rotate(-18deg)}20%{opacity:1}100%{left:29%;opacity:1;transform:rotate(-3deg)}}
+@keyframes matchRight{0%{right:-14%;opacity:0;transform:rotate(18deg)}20%{opacity:1}100%{right:29%;opacity:1;transform:rotate(3deg)}}
+@keyframes matchVs{0%{opacity:0;transform:translate(-50%,-50%) scale(.25)}70%{opacity:1;transform:translate(-50%,-50%) scale(1.25)}100%{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+@keyframes matchBall{0%{opacity:0;transform:translate(-50%,60px) scale(.65)}25%{opacity:1}100%{opacity:1;transform:translate(-50%,-4px) scale(1)}}
+@keyframes matchBallSpin{from{transform:rotate(0)}to{transform:rotate(500deg)}}
+@keyframes impactRing{0%{opacity:.8;transform:translate(-50%,-50%) scale(.2)}100%{opacity:0;transform:translate(-50%,-50%) scale(2.2)}}
+
+/* Incidencias: tarjetas rápidas y limpias */
+.incident-card{position:absolute;top:57px;width:70px;height:100px;border-radius:13px;box-shadow:0 17px 38px rgba(44,62,80,.18);opacity:0;border:4px solid rgba(255,255,255,.9)}
+.yellow-card{left:8%;background:linear-gradient(145deg,#ffe768,#f1c40f);animation:yellowCardIn .66s cubic-bezier(.2,.9,.25,1) .03s forwards}
+.red-card{right:8%;background:linear-gradient(145deg,#ff7a70,#e74c3c);animation:redCardIn .66s cubic-bezier(.2,.9,.25,1) .12s forwards}
+.ref-whistle{position:absolute;left:50%;top:85px;transform:translate(-50%,-50%) scale(.3);width:72px;height:72px;border-radius:24px;background:#fff;display:grid;place-items:center;color:#607d8b;font-size:32px;box-shadow:0 14px 32px rgba(44,62,80,.14);opacity:0;animation:warningPop .42s cubic-bezier(.17,.89,.32,1.35) .52s forwards}
+.incident-flash{position:absolute;left:50%;top:108px;transform:translate(-50%,-50%) scale(.2);color:#f39c12;font-size:80px;opacity:0;animation:incidentFlash .46s ease-out .62s forwards}
+@keyframes yellowCardIn{0%{left:8%;opacity:0;transform:rotate(-25deg) scale(.72)}18%{opacity:1}100%{left:34%;opacity:1;transform:rotate(-8deg) scale(1)}}
+@keyframes redCardIn{0%{right:8%;opacity:0;transform:rotate(25deg) scale(.72)}18%{opacity:1}100%{right:34%;opacity:1;transform:rotate(8deg) scale(1)}}
+@keyframes warningPop{0%{opacity:0;transform:translate(-50%,-50%) scale(.3)}70%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}100%{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+@keyframes incidentFlash{0%{opacity:.8;transform:translate(-50%,-50%) scale(.2) rotate(-12deg)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.6) rotate(10deg)}}
+
+@media(max-width:700px){.teams-motion-stage,.jornada-motion-stage,.match-motion-stage,.incident-motion-stage{height:190px}.team-shield,.match-shield{width:72px;height:72px;font-size:38px;border-radius:24px}.incident-card{width:56px;height:82px}.calendar-card{transform-origin:center}.match-vs{font-size:32px}}
+@media(prefers-reduced-motion:reduce){.teams-entrance,.jornada-entrance,.match-entrance,.incident-entrance{display:none!important}}
+

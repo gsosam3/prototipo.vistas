@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   Torneo Infantil - Equipos
+  </title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="assets/css/torneo.css" rel="stylesheet"/>
+</head>
+<body data-page="equipos">
+<button aria-label="Abrir menú" class="mobile-menu" data-menu-toggle="">
+<i class="fa-solid fa-bars">
+</i>
+</button>
+<div class="mobile-backdrop" data-mobile-backdrop="">
+</div>
+<div class="app">
+<aside class="sidebar">
+<div class="brand">
+<div class="brand-mark">
+<i class="fa-solid fa-futbol">
+</i>
+</div>
+<div class="brand-title">
+      Torneo Infantil
+     </div>
+<div class="brand-sub">
+      Gestión deportiva
+     </div>
+</div>
+<nav class="nav">
+<a data-nav="inicio" href="index.html">
+<i class="fa-solid fa-house-chimney">
+</i>
+<span>
+       Inicio
+      </span>
+</a>
+<a data-nav="jugadores" href="jugadores.html">
+<i class="fa-solid fa-child-reaching">
+</i>
+<span>
+       Jugadores
+      </span>
+</a>
+<a data-nav="equipos" href="equipos.html">
+<i class="fa-solid fa-shield-halved">
+</i>
+<span>
+       Equipos
+      </span>
+</a>
+<a data-nav="jornadas" href="jornadas.html">
+<i class="fa-solid fa-calendar-days">
+</i>
+<span>
+       Jornadas
+      </span>
+</a>
+<a data-nav="partidos" href="partidos.html">
+<i class="fa-solid fa-flag-checkered">
+</i>
+<span>
+       Partidos
+      </span>
+</a>
+<a data-nav="goles" href="goles.html">
+<i class="fa-solid fa-futbol">
+</i>
+<span>
+       Goles
+      </span>
+</a>
+<a data-nav="incidencias" href="incidencias.html">
+<i class="fa-solid fa-clipboard-list">
+</i>
+<span>
+       Incidencias
+      </span>
+</a>
+<a data-nav="reportes" href="reportes.html">
+<i class="fa-solid fa-chart-pie">
+</i>
+<span>
+       Reportes
+      </span>
+</a>
+</nav>
+</aside>
+<main class="main">
+<div class="topbar">
+<div class="search">
+<i class="fa-solid fa-magnifying-glass">
+</i>
+<input aria-label="Buscar en la vista" autocomplete="off" data-global-search="" placeholder="Buscar módulo o acción..." type="search"/>
+<div aria-hidden="true" class="search-results" data-search-results=""></div></div>
+<div class="top-info">
+<i class="fa-solid fa-calendar-day">
+</i>
+<span>
+       Próxima jornada:
+       <strong>
+        Jornada 3 · 10 Oct 2026
+       </strong>
+</span>
+</div>
+</div>
+<div class="view-head" data-page-head="equipos">
+<div>
+<div class="view-title-row">
+<div class="title-icon">
+<i class="fa-solid fa-shield-halved">
+</i>
+</div>
+<h1 class="view-title">
+        Equipos
+       </h1>
+</div>
+<p class="view-subtitle">
+       Cada equipo tiene su propia historia
+      </p>
+</div>
+<div class="actions">
+<button class="btn btn-primary" data-crud-open="equipo" data-mode="create" type="button">
+<i class="fa-solid fa-plus">
+</i>
+       Registrar equipo
+      </button>
+</div>
+</div>
+<div class="filters" data-filter-scope="">
+<div class="grow">
+<input class="input" data-search-input="" placeholder="Buscar equipo..."/>
+</div>
+<span class="filter-count" data-filter-count="">Mostrando todos</span></div>
+<div class="grid grid-2">
+<div class="card module-card team-card" data-filter-item="" data-search="Municipal" style="--team:#E74C3C">
+<div class="module-icon">
+<i class="fa-solid fa-shield">
+</i>
+</div>
+<div class="module-info">
+<div class="module-title">
+        Municipal
+       </div>
+<div class="module-desc">
+        8 jugadores registrados
+       </div>
+</div>
+<div class="row-actions">
+<button class="btn btn-blue btn-sm" data-roster='[["Carlos Andrés López García", "Delantero"], ["Diego Alejandro Ramírez", "Defensa"], ["Sofía Valentina Pérez", "Mediocampista"]]' data-team-roster="Municipal" type="button"><i class="fa-solid fa-users"></i> Plantilla</button>
+<button class="btn btn-outline btn-sm" data-color="#E74C3C" data-crud-open="equipo" data-mode="edit" data-nombre="Municipal" type="button">
+<i class="fa-solid fa-pen">
+</i>
+        Editar
+       </button>
+<a class="btn btn-danger btn-sm" data-confirm="¿Eliminar el equipo Municipal?" href="#">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</div>
+</div>
+<div class="card module-card team-card" data-filter-item="" data-search="Antigua" style="--team:#2ECC71">
+<div class="module-icon">
+<i class="fa-solid fa-shield">
+</i>
+</div>
+<div class="module-info">
+<div class="module-title">
+        Antigua
+       </div>
+<div class="module-desc">
+        7 jugadores registrados
+       </div>
+</div>
+<div class="row-actions">
+<button class="btn btn-blue btn-sm" data-roster='[["Mateo García Morales", "Portero"], ["Alejandro Sosa Castillo", "Delantero"], ["Valeria Gómez", "Defensa"]]' data-team-roster="Antigua" type="button"><i class="fa-solid fa-users"></i> Plantilla</button>
+<button class="btn btn-outline btn-sm" data-color="#2ECC71" data-crud-open="equipo" data-mode="edit" data-nombre="Antigua" type="button">
+<i class="fa-solid fa-pen">
+</i>
+        Editar
+       </button>
+<a class="btn btn-danger btn-sm" data-confirm="¿Eliminar el equipo Antigua?" href="#">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</div>
+</div>
+<div class="card module-card team-card" data-filter-item="" data-search="Comunicaciones Infantil" style="--team:#3498DB">
+<div class="module-icon">
+<i class="fa-solid fa-shield">
+</i>
+</div>
+<div class="module-info">
+<div class="module-title">
+        Comunicaciones Infantil
+       </div>
+<div class="module-desc">
+        9 jugadores registrados
+       </div>
+</div>
+<div class="row-actions">
+<button class="btn btn-blue btn-sm" data-roster='[["Luis Méndez Ruiz", "Mediocampista"], ["Daniel Herrera", "Delantero"], ["María Fernanda Ruiz", "Portero"]]' data-team-roster="Comunicaciones Infantil" type="button"><i class="fa-solid fa-users"></i> Plantilla</button>
+<button class="btn btn-outline btn-sm" data-color="#3498DB" data-crud-open="equipo" data-mode="edit" data-nombre="Comunicaciones Infantil" type="button">
+<i class="fa-solid fa-pen">
+</i>
+        Editar
+       </button>
+<a class="btn btn-danger btn-sm" data-confirm="¿Eliminar el equipo Comunicaciones Infantil?" href="#">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</div>
+</div>
+<div class="card module-card team-card" data-filter-item="" data-search="Aurora Infantil" style="--team:#F39C12">
+<div class="module-icon">
+<i class="fa-solid fa-shield">
+</i>
+</div>
+<div class="module-info">
+<div class="module-title">
+        Aurora Infantil
+       </div>
+<div class="module-desc">
+        6 jugadores registrados
+       </div>
+</div>
+<div class="row-actions">
+<button class="btn btn-blue btn-sm" data-roster='[["Emilio Santos", "Defensa"], ["Isabella López", "Mediocampista"], ["Samuel Reyes", "Delantero"]]' data-team-roster="Aurora Infantil" type="button"><i class="fa-solid fa-users"></i> Plantilla</button>
+<button class="btn btn-outline btn-sm" data-color="#F39C12" data-crud-open="equipo" data-mode="edit" data-nombre="Aurora Infantil" type="button">
+<i class="fa-solid fa-pen">
+</i>
+        Editar
+       </button>
+<a class="btn btn-danger btn-sm" data-confirm="¿Eliminar el equipo Aurora Infantil?" href="#">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</div>
+</div>
+</div>
+<div class="footer-note">
+     Prototipo visual navegable · Torneo Infantil
+    </div>
+</main>
+</div>
+<div class="toast" data-toast="">
+</div>
+<div aria-hidden="true" class="crud-backdrop" data-crud-modal="equipo">
+<section aria-labelledby="equipo-modal-title" aria-modal="true" class="crud-modal" role="dialog">
+<div class="crud-head">
+<div>
+<div class="crud-kicker">
+<i class="fa-solid fa-shield-halved">
+</i>
+       Equipos
+      </div>
+<h2 data-create-title="Registrar equipo" data-crud-title="" data-edit-title="Editar equipo" id="equipo-modal-title">
+       Registrar equipo
+      </h2>
+<p>
+       Define el nombre y un color identificador que se mantendrá en todo el sistema.
+      </p>
+</div>
+<button aria-label="Cerrar" class="modal-close" data-close-crud="" title="Cerrar ventana" type="button">
+<i class="fa-solid fa-xmark">
+</i>
+</button>
+</div>
+<form class="crud-form" data-crud-form="equipo" data-entity-label="Equipo">
+<div class="form-grid modal-form-grid">
+<div class="form-group full">
+<label class="label" for="equipo_nombre">
+        Nombre del equipo
+       </label>
+<input class="input" data-summary-label="Nombre del equipo" id="equipo_nombre" maxlength="100" name="nombre" placeholder="Ej. Municipal Infantil" required=""/>
+<span class="hint">Ingrese el nombre oficial con el que participará el equipo.</span>
+<span aria-live="polite" class="field-message"></span></div>
+<div class="helper-box full auto-color-note"><i class="fa-solid fa-palette"></i><div><strong>Color visual automático</strong><p>El sistema asignará un color estable a partir del equipo. No se guarda como dato editable en la base de datos.</p></div></div>
+</div>
+<div class="form-actions modal-form-actions">
+<button class="btn btn-outline" data-close-crud="" title="Cerrar ventana" type="button">
+<i class="fa-solid fa-arrow-left">
+</i>
+       Regresar
+      </button>
+<button class="btn btn-primary" type="submit">
+<i class="fa-solid fa-list-check">
+</i>
+       Revisar y guardar
+      </button>
+</div>
+</form>
+</section>
+</div>
+<script src="assets/js/components.js"></script><script src="assets/js/page-animations.js"></script><script src="assets/js/app.js"></script><div class="ui-coach" data-coach="">
+<button aria-expanded="false" aria-label="Abrir ayuda rápida" class="ui-coach-button" type="button">
+<span class="ui-coach-face"><i class="fa-solid fa-futbol"></i></span>
+<span class="ui-coach-ping"></span>
+</button>
+<div class="ui-coach-bubble" role="status">
+<div class="ui-coach-title">Tip de equipos</div>
+<div class="ui-coach-text">Abre la plantilla rápida para revisar jugadores sin salir de esta pantalla.</div>
+</div>
+</div><div aria-hidden="true" class="ui-drawer-backdrop" data-drawer-backdrop=""></div><aside aria-hidden="true" aria-label="Plantilla del equipo" class="ui-drawer" data-team-drawer="">
+<div class="ui-drawer-head"><div><div class="crud-kicker"><i class="fa-solid fa-users"></i> Plantilla rápida</div><h2 data-team-drawer-title="">Equipo</h2><p>Consulta rápida sin abandonar Equipos.</p></div><button aria-label="Cerrar" class="modal-close" data-drawer-close="" type="button"><i class="fa-solid fa-xmark"></i></button></div>
+<div class="ui-drawer-body" data-team-drawer-body=""></div>
+<div class="ui-drawer-foot"><a class="btn btn-blue" href="jugadores.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Jugadores</a></div>
+</aside></body>
+</html>

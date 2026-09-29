@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   Torneo Infantil - Jugadores
+  </title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="assets/css/torneo.css" rel="stylesheet"/>
+</head>
+<body data-page="jugadores">
+<button aria-label="Abrir menú" class="mobile-menu" data-menu-toggle="">
+<i class="fa-solid fa-bars">
+</i>
+</button>
+<div class="mobile-backdrop" data-mobile-backdrop="">
+</div>
+<div class="app">
+<aside class="sidebar">
+<div class="brand">
+<div class="brand-mark">
+<i class="fa-solid fa-futbol">
+</i>
+</div>
+<div class="brand-title">
+      Torneo Infantil
+     </div>
+<div class="brand-sub">
+      Gestión deportiva
+     </div>
+</div>
+<nav class="nav">
+<a data-nav="inicio" href="index.html">
+<i class="fa-solid fa-house-chimney">
+</i>
+<span>
+       Inicio
+      </span>
+</a>
+<a data-nav="jugadores" href="jugadores.html">
+<i class="fa-solid fa-child-reaching">
+</i>
+<span>
+       Jugadores
+      </span>
+</a>
+<a data-nav="equipos" href="equipos.html">
+<i class="fa-solid fa-shield-halved">
+</i>
+<span>
+       Equipos
+      </span>
+</a>
+<a data-nav="jornadas" href="jornadas.html">
+<i class="fa-solid fa-calendar-days">
+</i>
+<span>
+       Jornadas
+      </span>
+</a>
+<a data-nav="partidos" href="partidos.html">
+<i class="fa-solid fa-flag-checkered">
+</i>
+<span>
+       Partidos
+      </span>
+</a>
+<a data-nav="goles" href="goles.html">
+<i class="fa-solid fa-futbol">
+</i>
+<span>
+       Goles
+      </span>
+</a>
+<a data-nav="incidencias" href="incidencias.html">
+<i class="fa-solid fa-clipboard-list">
+</i>
+<span>
+       Incidencias
+      </span>
+</a>
+<a data-nav="reportes" href="reportes.html">
+<i class="fa-solid fa-chart-pie">
+</i>
+<span>
+       Reportes
+      </span>
+</a>
+</nav>
+</aside>
+<main class="main">
+<div class="topbar">
+<div class="search">
+<i class="fa-solid fa-magnifying-glass">
+</i>
+<input aria-label="Buscar en la vista" autocomplete="off" data-global-search="" placeholder="Buscar módulo o acción..." type="search"/>
+<div aria-hidden="true" class="search-results" data-search-results=""></div></div>
+<div class="top-info">
+<i class="fa-solid fa-calendar-day">
+</i>
+<span>
+       Próxima jornada:
+       <strong>
+        Jornada 3 · 10 Oct 2026
+       </strong>
+</span>
+</div>
+</div>
+<div class="view-head" data-page-head="jugadores">
+<div>
+<div class="view-title-row">
+<div class="title-icon">
+<i class="fa-solid fa-child-reaching">
+</i>
+</div>
+<h1 class="view-title">
+        Jugadores
+       </h1>
+</div>
+<p class="view-subtitle">
+       Conoce y administra a las estrellas del torneo
+      </p>
+</div>
+<div class="actions">
+<button class="btn btn-primary" data-crud-open="jugador" data-mode="create" type="button">
+<i class="fa-solid fa-plus">
+</i>
+       Registrar jugador
+      </button>
+</div>
+</div>
+<div class="filters" data-filter-scope="">
+<div class="grow">
+<input class="input" data-search-input="" placeholder="Buscar por nombre, apellido o posición..."/>
+</div>
+<select class="select" data-filter-select="team" style="max-width:240px">
+<option value="todos">
+       Todos los equipos
+      </option>
+<option value="municipal">
+       Municipal
+      </option>
+<option value="antigua">
+       Antigua
+      </option>
+<option value="comunicaciones">
+       Comunicaciones Infantil
+      </option>
+</select>
+<select class="select" data-filter-select="position" style="max-width:220px">
+<option value="todos">
+       Todas las posiciones
+      </option>
+<option value="delantero">
+       Delantero
+      </option>
+<option value="mediocampista">
+       Mediocampista
+      </option>
+<option value="defensa">
+       Defensa
+      </option>
+<option value="portero">
+       Portero
+      </option>
+</select>
+<span class="filter-count" data-filter-count="">Mostrando todos</span></div>
+<div class="list">
+<div class="row-card" data-filter-item="" data-position="delantero" data-search="Carlos Andrés López García Municipal Delantero" data-team="municipal">
+<img alt="Carlos Andrés López García" class="avatar" src="https://api.dicebear.com/7.x/adventurer/svg?seed=CarlosL&amp;backgroundColor=b6e3f4"/>
+<div class="row-main">
+<div class="row-name">
+        Carlos Andrés López García
+       </div>
+<div class="row-meta">
+        Municipal · Delantero · Nacimiento: 14/05/2015
+       </div>
+</div>
+<div class="row-actions">
+<a class="btn btn-blue btn-sm" href="jugador.html">
+<i class="fa-solid fa-eye">
+</i>
+        Ver
+       </a>
+<button class="btn btn-outline btn-sm" data-apellidos="López García" data-crud-open="jugador" data-equipo="Municipal" data-fecha_nacimiento="2015-05-14" data-mode="edit" data-nombres="Carlos Andrés" data-posicion="Delantero" type="button">
+<i class="fa-solid fa-pen">
+</i>
+        Editar
+       </button>
+<a class="btn btn-danger btn-sm" data-confirm="¿Eliminar a Carlos Andrés López García?" href="#">
+<i class="fa-solid fa-trash">
+</i>
+        Eliminar
+       </a>
+</div>
+</div>
+<div class="row-card" data-filter-item="" data-position="defensa" data-search="Diego Alejandro Ramírez Municipal Defensa" data-team="municipal">
+<img alt="Diego Alejandro Ramírez" class="avatar" src="https://api.dicebear.com/7.x/adventurer/svg?seed=DiegoR&amp;backgroundColor=b6e3f4"/>
+<div class="row-main">
+<div class="row-name">
+        Diego Alejandro Ramírez
+       </div>
+<div class="row-meta">
+        Municipal · Defensa · Nacimiento: 22/08/2014
+       </div>
+</div>
+<div class="row-actions">
+<a class="btn btn-blue btn-sm" href="jugador.html">
+<i class="fa-solid fa-eye">
+</i>
+        Ver
+       </a>
+<button class="btn btn-outline btn-sm" data-apellidos="Ramírez" data-crud-open="jugador" data-equipo="Municipal" data-fecha_nacimiento="2014-12-03" data-mode="edit" data-nombres="Diego Alejandro" data-posicion="Defensa" type="button">
+<i class="fa-solid fa-pen">
+</i>
+        Editar
+       </button>
+<a class="btn btn-danger btn-sm" data-confirm="¿Eliminar a Diego Alejandro Ramírez?" href="#">
+<i class="fa-solid fa-trash">
+</i>
+        Eliminar
+       </a>
+</div>
+</div>
+<div class="row-card" data-filter-item="" data-position="mediocampista" data-search="Sofía Valentina Pérez Municipal Mediocampista" data-team="municipal">
+<img alt="Sofía Valentina Pérez" class="avatar" src="https://api.dicebear.com/7.x/adventurer/svg?seed=SofiaP&amp;backgroundColor=b6e3f4"/>
+<div class="row-main">
+<div class="row-name">
+        Sofía Valentina Pérez
+       </div>
+<div class="row-meta">
+        Municipal · Mediocampista · Nacimiento: 03/02/2015
+       </div>
+</div>
+<div class="row-actions">
+<a class="btn btn-blue btn-sm" href="jugador.html">
+<i class="fa-solid fa-eye">
+</i>
+        Ver
+       </a>
+<button class="btn btn-outline btn-sm" data-apellidos="Pérez" data-crud-open="jugador" data-equipo="Antigua" data-fecha_nacimiento="2015-08-21" data-mode="edit" data-nombres="Sofía Valentina" data-posicion="Mediocampista" type="button">
+<i class="fa-solid fa-pen">
+</i>
+        Editar
+       </button>
+<a class="btn btn-danger btn-sm" data-confirm="¿Eliminar a Sofía Valentina Pérez?" href="#">
+<i class="fa-solid fa-trash">
+</i>
+        Eliminar
+       </a>
+</div>
+</div>
+<div class="row-card" data-filter-item="" data-position="portero" data-search="Mateo García Morales Antigua Portero" data-team="antigua">
+<img alt="Mateo García Morales" class="avatar" src="https://api.dicebear.com/7.x/adventurer/svg?seed=MateoG&amp;backgroundColor=b6e3f4"/>
+<div class="row-main">
+<div class="row-name">
+        Mateo García Morales
+       </div>
+<div class="row-meta">
+        Antigua · Portero · Nacimiento: 17/07/2014
+       </div>
+</div>
+<div class="row-actions">
+<a class="btn btn-blue btn-sm" href="jugador.html">
+<i class="fa-solid fa-eye">
+</i>
+        Ver
+       </a>
+<button class="btn btn-outline btn-sm" data-apellidos="García Morales" data-crud-open="jugador" data-equipo="Antigua" data-fecha_nacimiento="2015-02-09" data-mode="edit" data-nombres="Mateo" data-posicion="Delantero" type="button">
+<i class="fa-solid fa-pen">
+</i>
+        Editar
+       </button>
+<a class="btn btn-danger btn-sm" data-confirm="¿Eliminar a Mateo García Morales?" href="#">
+<i class="fa-solid fa-trash">
+</i>
+        Eliminar
+       </a>
+</div>
+</div>
+<div class="row-card" data-filter-item="" data-position="delantero" data-search="Alejandro Sosa Castillo Antigua Delantero" data-team="antigua">
+<img alt="Alejandro Sosa Castillo" class="avatar" src="https://api.dicebear.com/7.x/adventurer/svg?seed=AlejandroS&amp;backgroundColor=b6e3f4"/>
+<div class="row-main">
+<div class="row-name">
+        Alejandro Sosa Castillo
+       </div>
+<div class="row-meta">
+        Antigua · Delantero · Nacimiento: 09/12/2015
+       </div>
+</div>
+<div class="row-actions">
+<a class="btn btn-blue btn-sm" href="jugador.html">
+<i class="fa-solid fa-eye">
+</i>
+        Ver
+       </a>
+<button class="btn btn-outline btn-sm" data-apellidos="Sosa Castillo" data-crud-open="jugador" data-equipo="Aurora Infantil" data-fecha_nacimiento="2014-06-17" data-mode="edit" data-nombres="Alejandro" data-posicion="Portero" type="button">
+<i class="fa-solid fa-pen">
+</i>
+        Editar
+       </button>
+<a class="btn btn-danger btn-sm" data-confirm="¿Eliminar a Alejandro Sosa Castillo?" href="#">
+<i class="fa-solid fa-trash">
+</i>
+        Eliminar
+       </a>
+</div>
+</div>
+<div class="row-card" data-filter-item="" data-position="mediocampista" data-search="Luis Méndez Ruiz Comunicaciones Infantil Mediocampista" data-team="comunicaciones">
+<img alt="Luis Méndez Ruiz" class="avatar" src="https://api.dicebear.com/7.x/adventurer/svg?seed=LuisM&amp;backgroundColor=b6e3f4"/>
+<div class="row-main">
+<div class="row-name">
+        Luis Méndez Ruiz
+       </div>
+<div class="row-meta">
+        Comunicaciones Infantil · Mediocampista · Nacimiento: 30/01/2015
+       </div>
+</div>
+<div class="row-actions">
+<a class="btn btn-blue btn-sm" href="jugador.html">
+<i class="fa-solid fa-eye">
+</i>
+        Ver
+       </a>
+<button class="btn btn-outline btn-sm" data-apellidos="Méndez Ruiz" data-crud-open="jugador" data-equipo="Comunicaciones Infantil" data-fecha_nacimiento="2015-11-29" data-mode="edit" data-nombres="Luis" data-posicion="Mediocampista" type="button">
+<i class="fa-solid fa-pen">
+</i>
+        Editar
+       </button>
+<a class="btn btn-danger btn-sm" data-confirm="¿Eliminar a Luis Méndez Ruiz?" href="#">
+<i class="fa-solid fa-trash">
+</i>
+        Eliminar
+       </a>
+</div>
+</div>
+</div>
+<div class="footer-note">
+     Prototipo visual navegable · Torneo Infantil
+    </div>
+</main>
+</div>
+<div class="toast" data-toast="">
+</div>
+<div aria-hidden="true" class="crud-backdrop" data-crud-modal="jugador">
+<section aria-labelledby="jugador-modal-title" aria-modal="true" class="crud-modal crud-modal-wide" role="dialog">
+<div class="crud-head">
+<div>
+<div class="crud-kicker">
+<i class="fa-solid fa-child-reaching">
+</i>
+       Jugadores
+      </div>
+<h2 data-create-title="Registrar jugador" data-crud-title="" data-edit-title="Editar jugador" id="jugador-modal-title">
+       Registrar jugador
+      </h2>
+<p>
+       Datos personales y deportivos básicos del participante.
+      </p>
+</div>
+<button aria-label="Cerrar" class="modal-close" data-close-crud="" title="Cerrar ventana" type="button">
+<i class="fa-solid fa-xmark">
+</i>
+</button>
+</div>
+<form class="crud-form" data-crud-form="jugador" data-entity-label="Jugador">
+<div class="form-grid modal-form-grid">
+<div class="form-group span-6">
+<label class="label" for="jug_nombres">
+        Nombres
+       </label>
+<input class="input" data-summary-label="Nombres" id="jug_nombres" maxlength="100" name="nombres" placeholder="Ej. Carlos Andrés" required=""/>
+<span class="hint">Ingrese el nombre o los nombres del jugador.</span><span aria-live="polite" class="field-message"></span></div>
+<div class="form-group span-6">
+<label class="label" for="jug_apellidos">
+        Apellidos
+       </label>
+<input class="input" data-summary-label="Apellidos" id="jug_apellidos" maxlength="100" name="apellidos" placeholder="Ej. López García" required=""/>
+<span class="hint">Ingrese los apellidos completos del jugador.</span><span aria-live="polite" class="field-message"></span></div>
+<div class="form-group span-4">
+<label class="label" for="jug_fecha">
+        Fecha de nacimiento
+       </label>
+<input class="input" data-summary-label="Fecha de nacimiento" id="jug_fecha" name="fecha_nacimiento" required="" type="date"/>
+<span class="hint">Seleccione la fecha de nacimiento del participante.</span><span aria-live="polite" class="field-message"></span></div>
+<div class="form-group span-4">
+<label class="label" for="jug_equipo">
+        Equipo
+       </label>
+<select class="select" data-summary-label="Equipo" id="jug_equipo" name="equipo" required="">
+<option value="">Seleccione equipo</option>
+<option>
+         Municipal
+        </option>
+<option>
+         Antigua
+        </option>
+<option>
+         Comunicaciones Infantil
+        </option>
+<option>
+         Aurora Infantil
+        </option>
+</select>
+<span class="hint">Seleccione el equipo al que pertenece el jugador.</span><span aria-live="polite" class="field-message"></span></div>
+<div class="form-group span-4">
+<label class="label" for="jug_posicion">
+        Posición
+       </label>
+<select class="select" data-summary-label="Posición" id="jug_posicion" name="posicion" required="">
+<option value="">Seleccione posición</option>
+<option>
+         Portero
+        </option>
+<option>
+         Defensa
+        </option>
+<option>
+         Mediocampista
+        </option>
+<option>
+         Delantero
+        </option>
+</select>
+<span class="hint">Seleccione la posición habitual de juego.</span><span aria-live="polite" class="field-message"></span></div>
+<div class="form-group full">
+<label class="label" for="jug_foto">
+        Fotografía
+       </label>
+<input accept="image/png,image/jpeg" class="input file-input" data-summary-label="Fotografía" id="jug_foto" name="fotografia" type="file"/>
+<span class="hint">JPG o PNG · máximo 2 MB. En edición puede conservar la fotografía actual.</span>
+<span aria-live="polite" class="field-message"></span></div>
+</div>
+<div class="form-actions modal-form-actions">
+<button class="btn btn-outline" data-close-crud="" title="Cerrar ventana" type="button">
+<i class="fa-solid fa-arrow-left">
+</i>
+       Regresar
+      </button>
+<button class="btn btn-primary" type="submit">
+<i class="fa-solid fa-list-check">
+</i>
+       Revisar y guardar
+      </button>
+</div>
+</form>
+</section>
+</div>
+<script src="assets/js/components.js"></script><script src="assets/js/page-animations.js"></script><script src="assets/js/app.js"></script><div class="ui-coach" data-coach="">
+<button aria-expanded="false" aria-label="Abrir ayuda rápida" class="ui-coach-button" type="button">
+<span class="ui-coach-face"><i class="fa-solid fa-futbol"></i></span>
+<span class="ui-coach-ping"></span>
+</button>
+<div class="ui-coach-bubble" role="status">
+<div class="ui-coach-title">Tip de jugadores</div>
+<div class="ui-coach-text">Filtra por equipo o posición. Haz clic en una ficha para consultar el perfil completo.</div>
+</div>
+</div></body>
+</html>
